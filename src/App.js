@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Template from './template';
+import FinishedTasks from './finishedtasks';
+import {TodoListHigh, TodoListLow} from './todo-list';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<>
+  <div className="wrapper">
+    <main className="page">
+      <div className="page__todo todo">
+        <div className="todo__container">
+          <div className="todo__block">
+<TodoListHigh/>
+<TodoListLow/>
+          </div>
+        </div>
+      </div>
+<FinishedTasks/>
+    </main>
+  </div>
+<Template/>
+</>
   );
 }
 
